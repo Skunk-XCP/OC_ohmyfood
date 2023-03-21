@@ -1,3 +1,50 @@
+.top_content_subtitle, .top_content_title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 30px;
+}
+
+@keyframes hearts {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 0;
+  }
+}
+@keyframes checkIcon {
+  from {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+@keyframes checkBox {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   max-width: 1440px;
   margin: 0;
@@ -7,10 +54,18 @@ body {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: "shrikhand";
+  src: url(../../assets/fonts/Shrikhand-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-Regular.ttf);
+}
 header {
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid black;
+  box-shadow: 0 0 10px gray;
 }
 
 .logo_omf {
@@ -18,22 +73,384 @@ header {
   padding: 10px 0;
 }
 
+.infos_footer {
+  background-color: #353333;
+  color: white;
+  padding: 15px 0 25px 20px;
+}
+.infos_footer_logo {
+  height: 0.9rem;
+  padding-bottom: 15px;
+}
+.infos_footer_mention--line {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  font-family: "Roboto";
+}
+.infos_footer_mention--icon1 {
+  font-size: 0.7rem;
+  margin-right: 12px;
+}
+.infos_footer_mention--icon2 {
+  font-size: 0.6rem;
+  margin-right: 10px;
+}
+.infos_footer_mention--text {
+  font-size: 0.9rem;
+  color: white;
+  margin: 0;
+}
+
+.infos_footer_mention--line > a {
+  text-decoration: none;
+}
+
 #location {
   display: flex;
   justify-content: center;
-  margin-left: 70px;
-  padding-top: 10px;
-  background-color: #e7e5e5;
+  padding: 10px 0 10px 70px;
+  background-color: #dfdbdb;
+  margin-top: 3px;
 }
 
-.search_input {
+.location_search_input {
   font-size: 1.1rem;
   border: none;
+  background-color: #dfdbdb;
 }
-
-.fa-location-dot {
+.location_form--icon {
   font-size: 0.9rem;
   margin: 0 10px;
+}
+
+.top_content {
+  background-color: #EDEDED;
+  padding-bottom: 70px;
+  text-align: center;
+}
+.top_content_title {
+  margin-top: 0;
+  padding: 30px 30px 0 30px;
+  font-family: "Roboto";
+}
+.top_content_subtitle {
+  font-size: 1.1rem;
+  padding-bottom: 20px;
+  font-family: "Roboto";
+}
+.top_content_btn {
+  text-align: center;
+  text-decoration: none;
+  font-family: "Roboto";
+  padding: 15px 25px;
+  color: white;
+  border-radius: 25px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 3px 3px 10px gray;
+  font-size: 1.1rem;
+}
+.top_content_btn:hover {
+  background: linear-gradient(to right bottom, #ff93e1, #a16be0);
+  box-shadow: 6px 6px 10px black;
+}
+
+#operations {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.title_test {
+  margin: 0 0 30px 20px;
+  font-family: "Roboto";
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  width: 85%;
+  margin: 0 auto 30px auto;
+  padding: 10px 0;
+  font-family: "Roboto";
+  background-color: whitesmoke;
+  box-shadow: 3px 3px 10px #cccccc;
+}
+.step_number {
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 5px 10px;
+  color: white;
+  background-color: #9356DC;
+  position: relative;
+  left: -5%;
+}
+.step_title {
+  padding-left: 20px;
+}
+.step_icon {
+  color: grey;
+}
+.step:hover {
+  background-color: #f2eafb;
+}
+.step:hover .step_icon {
+  color: #9356DC;
+}
+
+#restaurants {
+  background-color: #EDEDED;
+  padding-bottom: 35px;
+  padding-top: 30px;
+}
+
+.restaurants_title {
+  margin-left: 20px;
+  font-family: "Roboto";
+}
+
+.cards {
+  padding: 0 20px;
+}
+
+.card {
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 3px 3px 10px #d9d9d9;
+}
+.card_cover_image {
+  width: 100%;
+  object-fit: cover;
+  height: 170px;
+  border-radius: 15px 15px 0 0;
+}
+.card_sticker {
+  font-family: "Roboto";
+  background-color: #99E2D0;
+  color: #217460;
+  padding: 5px 10px;
+  position: absolute;
+  top: -5px;
+  right: 15px;
+}
+.card_title {
+  margin: 0;
+  padding: 10px 0 5px 15px;
+  font-family: "Roboto";
+  color: black;
+}
+.card_location {
+  margin: 0;
+  padding: 0 0 15px 15px;
+  font-family: "Roboto";
+  color: black;
+}
+.card_icon {
+  position: absolute;
+  font-size: 20px;
+  right: 30px;
+  bottom: 20px;
+}
+.card_icon--empty {
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+}
+.card_icon--full {
+  position: absolute;
+  right: 0;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform-origin: bottom;
+}
+.card_icon--full:active {
+  animation: hearts 300ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .card_icon--full:hover {
+    animation: hearts 300ms ease-in-out forwards;
+  }
+}
+
+.card > a {
+  text-decoration: none;
+}
+
+.heading__arrow {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+#menu {
+  background-color: #f2f2f2;
+  padding-bottom: 60px;
+}
+
+.menu_image {
+  height: 200px;
+  width: 100%;
+}
+.menu_head {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+.menu_head_title {
+  font-family: "Shrikhand";
+  font-size: 1.3rem;
+  padding-left: 30px;
+}
+.menu_head_icon {
+  position: absolute;
+  font-size: 20px;
+  right: 30px;
+  bottom: 20px;
+}
+.menu_head_icon--empty {
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+}
+.menu_head_icon--full {
+  position: absolute;
+  right: 0;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform-origin: bottom;
+}
+.menu_head_icon--full:active {
+  animation: hearts 300ms ease-in-out forwards;
+}
+@media screen and (min-width: 1024px) {
+  .menu_head_icon--full:hover {
+    animation: hearts 300ms ease-in-out forwards;
+  }
+}
+.menu_btn {
+  text-align: center;
+  margin-top: 30px;
+}
+.menu_btn-order {
+  text-align: center;
+  text-decoration: none;
+  font-family: "Roboto";
+  padding: 15px 55px;
+  color: white;
+  border-radius: 25px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 3px 3px 10px gray;
+}
+.menu_btn-order:hover {
+  background: linear-gradient(to right bottom, #ff93e1, #a16be0);
+  box-shadow: 6px 6px 10px black;
+}
+
+.meal_category_title {
+  position: relative;
+  margin-left: 20px;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+.meal_category_title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+.meal_category_container--flex {
+  padding-bottom: 20px;
+}
+.meal_category_card {
+  position: relative;
+  cursor: pointer;
+  font-family: "Roboto";
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px #d9d9d9;
+  margin: 10px 20px;
+  padding: 0 0 0 15px;
+}
+.meal_category_card-box {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+}
+.meal_category_card_title {
+  margin: 0;
+  padding-top: 10px;
+  font-family: "Roboto";
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.meal_category_card_infos {
+  width: 80%;
+  padding-top: -30px;
+}
+.meal_category_card_description {
+  margin: 0;
+  padding: 6px 0;
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.meal_category_card_price {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  width: 20%;
+}
+.meal_category_card_style {
+  position: absolute;
+  top: 38%;
+  right: 25px;
+}
+.meal_category_card_select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  width: 0%;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  transition: all 1s;
+  animation: movePrice 2s ease-in-out forwards;
+}
+.meal_category_card-icon {
+  opacity: 0;
+  font-size: 1.2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 3px;
+  color: #99E2D0;
+}
+.meal_category_card:active .meal_category_card-box {
+  width: 60%;
+  transition: all 1s;
+}
+.meal_category_card:active .meal_category_card_select {
+  width: 25%;
+  animation: checkBox 2s ease-in-out forwards;
+}
+.meal_category_card:active .meal_category_card-icon {
+  animation: checkIcon 1s ease-in 100ms forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

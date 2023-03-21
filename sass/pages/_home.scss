@@ -1,18 +1,134 @@
+// LOCALISATION --------------------------------
+
 #location {
     display: flex;
     justify-content: center;
-    margin-left: 70px;
-    padding-top: 10px;
+    padding: 10px 0 10px 70px;
     background-color: $location_bgc;
+    margin-top: 3px;
 }
 
-.search_input {
-    font-size: 1.1rem;
-    border: none;
+.location {
+    &_search_input {
+        font-size: 1.1rem;
+        border: none;
+        background-color: $location_bgc;
+    }
+    &_form--icon {
+        font-size: .9rem;
+        margin: 0 10px;
+    }
 }
 
-.fa-location-dot {
-    font-size: .9rem;
-    margin: 0 10px;
+// EXPLORATION --------------------------------
+
+.top_content {
+    background-color: $bg_color;
+    padding-bottom: 70px;
+    text-align: center;
+    &_title {
+        margin-top: 0;
+        padding: 30px 30px 0 30px;
+        @extend %flex_center;
+        font-family: $main_font;
+    }
+    &_subtitle {
+        @extend %flex_center;
+        font-size: 1.1rem;
+        padding-bottom: 20px;
+        font-family: $main_font;
+    }
+    &_btn {
+        @include main_btn($secondary_color, $primary_color, 15px, 25px);
+        font-size: 1.1rem;
+    }
+}
+
+// FONCTIONNEMENT --------------------------------
+
+#operations {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.title_test {
+    margin: 0 0 30px 20px;
+    font-family: $main_font;
+}
+
+.step {
+    @include operation_style();
+    &_number {
+        @include step_number_style();
+    }
+    &_title {
+        padding-left: 20px;
+    }
+    &_icon {
+        color: grey;
+    }
+    &:hover {
+        background-color: lighten($primary_color, $amount:35);
+        .step_icon {
+            color: $primary_color;
+        }
+    }
+}
+
+// RESTAURANTS --------------------------------
+
+#restaurants {
+    background-color: $bg_color;
+    padding-bottom: 35px;
+    padding-top: 30px;
+}
+
+.restaurants_title {
+    margin-left: 20px;
+    font-family: $main_font;
+}
+
+.cards {
+    padding: 0 20px;
+}
+
+.card {
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: $box_shadow lighten($color_shadow, $amount: 85);
+    &_cover_image {
+        width: 100%;
+        object-fit: cover;
+        height: 170px;
+        border-radius: 15px 15px 0 0;
+    }
+    &_sticker {
+        font-family: $main_font;
+        background-color: $tertiary_color;
+        color: darken($tertiary_color, $amount: 45);
+        padding: 5px 10px;
+        position: absolute;
+        top: -5px;
+        right: 15px;
+    }
+    &_title {
+        margin: 0;
+        padding: 10px 0 5px 15px;
+        font-family: $main_font;
+        color: black;
+    }
+    &_location {
+        margin: 0;
+        padding: 0 0 15px 15px;
+        font-family: $main_font;
+        color: black;
+    }
+    @include hearts(30px, 20px)
+}
+
+.card > a {
+    text-decoration: none;
 }
 

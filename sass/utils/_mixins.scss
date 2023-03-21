@@ -1,0 +1,74 @@
+
+@mixin operation_style () {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    width: 85%;
+    margin: 0 auto 30px auto;
+    padding: 10px 0;
+    font-family: $main_font;
+    background-color: lighten( #f2f2f2, $amount: 1);
+    box-shadow: $box_shadow lighten($color_shadow, $amount: 80);
+}
+
+@mixin step_number_style {
+    border: 1px solid;
+    border-radius: 25px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #9356DC;
+    position: relative;
+    left: -5%;
+}
+
+@mixin hearts ($pos_x, $pos_y) {
+    &_icon {
+        position: absolute;
+        font-size: 20px;
+        right: $pos_x;
+        bottom: $pos_y;
+        &--empty {
+            position: relative;
+            cursor: pointer;
+            z-index: 0;
+        }
+        &--full {
+            position: absolute;
+            right: 0;
+            background-image: linear-gradient(to bottom, $primary_color, $secondary_color);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity: 0;
+            transform-origin: bottom;
+            &:active {
+                animation: hearts 300ms ease-in-out forwards;
+            }
+            @media screen and (min-width: 1024px) {
+                &:hover {
+                    animation: hearts 300ms ease-in-out forwards;
+                }
+            }
+        }
+    }
+}
+
+@mixin animCheck {
+    &:active &-box {
+        width: 60%;
+        transition: all 1s;
+    }
+    &:active &_select {
+        width: 25%;
+        animation: checkBox 2s ease-in-out forwards;
+    }
+    &:active &-icon {
+        animation: checkIcon 1s ease-in 100ms forwards;
+    }
+}
+
+@mixin ellipse {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

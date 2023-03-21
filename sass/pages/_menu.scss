@@ -1,0 +1,128 @@
+.heading__arrow {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+
+// BLOC MENU---------------------------------------------
+
+#menu {
+    background-color: #f2f2f2;
+    padding-bottom: 60px;
+}
+
+.menu {
+    &_image {
+        height: 200px;
+        width: 100%;
+    }
+    &_head {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        &_title {
+            font-family: $title_font;
+            font-size: 1.3rem;
+            padding-left: 30px;
+        }
+        @include hearts(30px, 20px)
+    }
+    &_btn {
+        text-align: center;
+        margin-top: 30px;
+        &-order {
+            @include main_btn($secondary_color, $primary_color, 15px, 55px);
+        }
+    }
+}
+
+.meal_category {
+    &_title {
+        position: relative;
+        margin-left: 20px;
+        font-family: $main_font;
+        text-transform: uppercase;
+        font-weight: lighter;
+        font-size: 1rem;
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 42px;
+            height: 3px;
+            background-color: $tertiary_color;
+        }
+    }
+    &_container--flex {
+        padding-bottom: 20px;
+    }
+    &_card {
+        position: relative;
+        cursor: pointer;
+        font-family: $main_font;
+        border-radius: 15px;
+        background-color: #fff;
+        box-shadow: $box_shadow lighten($color_shadow, $amount: 85);
+        margin: 10px 20px;
+        padding: 0 0 0 15px;
+        &-box {
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            width: 100%;
+        }
+        &_title {
+            margin: 0;
+            padding-top: 10px;
+            font-family: $main_font;
+            @include ellipse;
+        }
+        &_infos {
+            width: 80%;
+            padding-top: -30px;
+        }
+        &_description {
+            margin: 0;
+            padding: 6px 0;
+            font-family: $main_font;
+            font-size: .9rem;
+            @include ellipse;
+        }
+        &_price {
+            position: relative;
+            font-size: .9rem;
+            font-weight: bolder;
+            width: 20%;
+        }
+        &_style {
+            position: absolute;
+            top: 38%;
+            right: 25px;
+            // display: inline-block;
+        }
+        &_select {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            width: 0%;
+            background-color: $tertiary_color;
+            border-radius: 0 15px 15px 0;
+            transition: all 1s;
+            animation: movePrice 2s ease-in-out forwards;
+        }
+        &-icon {
+            opacity: 0;
+            font-size: 1.2rem;
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 3px;
+            color: $tertiary_color;
+            // animation: checkIcon 2s ease-in-out forwards; 
+        }
+        @include animCheck;
+    }
+}
+
