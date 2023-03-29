@@ -1,10 +1,3 @@
-.top_content_subtitle, .top_content_title {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 30px;
-}
-
 @keyframes hearts {
   0% {
     transform: scale(0);
@@ -34,7 +27,7 @@
   }
   to {
     opacity: 1;
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes checkBox {
@@ -72,15 +65,32 @@ header {
   height: 30px;
   padding: 10px 0;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .logo_omf {
+    height: 60px;
+    padding: 20px 0;
+  }
+}
 
 .infos_footer {
   background-color: #353333;
   color: white;
   padding: 15px 0 25px 20px;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .infos_footer {
+    padding: 30px 0 30px 40px;
+  }
+}
 .infos_footer_logo {
   height: 0.9rem;
   padding-bottom: 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .infos_footer_logo {
+    height: 1.8rem;
+    padding-bottom: 30px;
+  }
 }
 .infos_footer_mention--line {
   display: flex;
@@ -92,14 +102,31 @@ header {
   font-size: 0.7rem;
   margin-right: 12px;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .infos_footer_mention--icon1 {
+    font-size: 1.5rem;
+    margin-right: 24px;
+  }
+}
 .infos_footer_mention--icon2 {
   font-size: 0.6rem;
   margin-right: 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .infos_footer_mention--icon2 {
+    font-size: 1.2rem;
+    margin-right: 21px;
+  }
 }
 .infos_footer_mention--text {
   font-size: 0.9rem;
   color: white;
   margin: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .infos_footer_mention--text {
+    font-size: 1.6rem;
+  }
 }
 
 .infos_footer_mention--line > a {
@@ -113,15 +140,30 @@ header {
   background-color: #dfdbdb;
   margin-top: 3px;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #location {
+    padding: 15px 0 15px 90px;
+  }
+}
 
 .location_search_input {
   font-size: 1.1rem;
   border: none;
   background-color: #dfdbdb;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .location_search_input {
+    font-size: 1.8rem;
+  }
+}
 .location_form--icon {
   font-size: 0.9rem;
   margin: 0 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .location_form--icon {
+    font-size: 1.6rem;
+  }
 }
 
 .top_content {
@@ -130,13 +172,25 @@ header {
   text-align: center;
 }
 .top_content_title {
-  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 30px;
   padding: 30px 30px 0 30px;
   font-family: "Roboto";
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .top_content_title {
+    font-size: 3rem;
+  }
+}
 .top_content_subtitle {
-  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 30px;
   padding-bottom: 20px;
+  font-size: 1.1rem;
   font-family: "Roboto";
 }
 .top_content_btn {
@@ -149,6 +203,13 @@ header {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 3px 3px 10px gray;
   font-size: 1.1rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .top_content_btn {
+    font-size: 2.2rem;
+    padding: 30px 90px;
+    border-radius: 50px;
+  }
 }
 .top_content_btn:hover {
   background: linear-gradient(to right bottom, #ff93e1, #a16be0);
@@ -163,6 +224,11 @@ header {
 .title_test {
   margin: 0 0 30px 20px;
   font-family: "Roboto";
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .title_test {
+    font-size: 3rem;
+  }
 }
 
 .step {
@@ -253,6 +319,13 @@ header {
   right: 30px;
   bottom: 20px;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .card_icon {
+    right: 80px;
+    bottom: 30px;
+    font-size: 40px;
+  }
+}
 .card_icon--empty {
   position: relative;
   cursor: pointer;
@@ -286,15 +359,39 @@ header {
   left: 20px;
   top: 20px;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .heading__arrow {
+    font-size: 2rem;
+    top: 35px;
+    left: 40px;
+  }
+}
 
 #menu {
   background-color: #f2f2f2;
-  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #menu {
+    margin-bottom: 120px;
+  }
 }
 
+.menu {
+  position: relative;
+  margin-top: -30px;
+  background-color: #fff;
+  border-radius: 35px 35px 0 0;
+}
 .menu_image {
-  height: 200px;
+  height: 12rem;
+  object-fit: cover;
   width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu_image {
+    height: 22rem;
+  }
 }
 .menu_head {
   display: flex;
@@ -305,13 +402,27 @@ header {
 .menu_head_title {
   font-family: "Shrikhand";
   font-size: 1.3rem;
-  padding-left: 30px;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu_head_title {
+    font-size: 2.2rem;
+    margin: 60px 0 40px 40px;
+  }
 }
 .menu_head_icon {
   position: absolute;
   font-size: 20px;
   right: 30px;
   bottom: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu_head_icon {
+    right: 80px;
+    bottom: 30px;
+    font-size: 40px;
+  }
 }
 .menu_head_icon--empty {
   position: relative;
@@ -340,6 +451,11 @@ header {
   text-align: center;
   margin-top: 30px;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu_btn {
+    margin-top: 80px;
+  }
+}
 .menu_btn-order {
   text-align: center;
   text-decoration: none;
@@ -349,6 +465,13 @@ header {
   border-radius: 25px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 3px 3px 10px gray;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu_btn-order {
+    font-size: 2.2rem;
+    padding: 30px 90px;
+    border-radius: 50px;
+  }
 }
 .menu_btn-order:hover {
   background: linear-gradient(to right bottom, #ff93e1, #a16be0);
@@ -363,6 +486,12 @@ header {
   font-weight: lighter;
   font-size: 1rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .meal_category_title {
+    font-size: 1.7rem;
+    margin-left: 60px;
+  }
+}
 .meal_category_title::after {
   position: absolute;
   content: "";
@@ -370,6 +499,12 @@ header {
   width: 42px;
   height: 3px;
   background-color: #99E2D0;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .meal_category_title::after {
+    width: 70px;
+    height: 5px;
+  }
 }
 .meal_category_container--flex {
   padding-bottom: 20px;
@@ -383,6 +518,11 @@ header {
   box-shadow: 3px 3px 10px #d9d9d9;
   margin: 10px 20px;
   padding: 0 0 0 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .meal_category_card {
+    margin: 20px 60px;
+  }
 }
 .meal_category_card-box {
   display: flex;
@@ -398,18 +538,29 @@ header {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .meal_category_card_title {
+    font-size: 1.6rem;
+  }
+}
 .meal_category_card_infos {
   width: 80%;
   padding-top: -30px;
 }
 .meal_category_card_description {
   margin: 0;
-  padding: 6px 0;
+  padding: 6px 0 10px 0;
   font-family: "Roboto";
   font-size: 0.9rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .meal_category_card_description {
+    font-size: 1.5rem;
+    padding: 12px 0 20px 0;
+  }
 }
 .meal_category_card_price {
   position: relative;
@@ -417,10 +568,21 @@ header {
   font-weight: bolder;
   width: 20%;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .meal_category_card_price {
+    font-size: 1.4rem;
+  }
+}
 .meal_category_card_style {
   position: absolute;
   top: 38%;
   right: 25px;
+  display: inline-block;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .meal_category_card_style {
+    top: 30%;
+  }
 }
 .meal_category_card_select {
   display: flex;
@@ -431,7 +593,6 @@ header {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   transition: all 1s;
-  animation: movePrice 2s ease-in-out forwards;
 }
 .meal_category_card-icon {
   opacity: 0;
@@ -441,7 +602,7 @@ header {
   padding: 3px;
   color: #99E2D0;
 }
-.meal_category_card:active .meal_category_card-box {
+.meal_category_card:active .meal_category_card_card {
   width: 60%;
   transition: all 1s;
 }

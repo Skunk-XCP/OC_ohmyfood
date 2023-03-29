@@ -2,6 +2,11 @@
     position: absolute;
     left: 20px;
     top: 20px;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        font-size: 2rem;
+        top: 35px;
+        left: 40px;
+    }
 }
 
 
@@ -9,13 +14,24 @@
 
 #menu {
     background-color: #f2f2f2;
-    padding-bottom: 60px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        margin-bottom: 120px;
+    }
 }
 
 .menu {
+    position: relative;
+    margin-top: -30px;
+    background-color: #fff;
+    border-radius: 35px 35px 0 0;
     &_image {
-        height: 200px;
+        height: 12rem;
+        object-fit: cover;
         width: 100%;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            height: 22rem;
+        }
     }
     &_head {
         display: flex;
@@ -25,13 +41,21 @@
         &_title {
             font-family: $title_font;
             font-size: 1.3rem;
-            padding-left: 30px;
+            padding-left: 20px;
+            margin-top: 30px;
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                font-size: 2.2rem;
+                margin: 60px 0 40px 40px;
+            }
         }
-        @include hearts(30px, 20px)
+        @include hearts(30px, 20px, 20px)
     }
     &_btn {
         text-align: center;
         margin-top: 30px;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            margin-top: 80px;
+        }
         &-order {
             @include main_btn($secondary_color, $primary_color, 15px, 55px);
         }
@@ -46,6 +70,10 @@
         text-transform: uppercase;
         font-weight: lighter;
         font-size: 1rem;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            font-size: 1.7rem;
+            margin-left: 60px;
+        }
         &::after {
             position: absolute;
             content: "";
@@ -53,6 +81,10 @@
             width: 42px;
             height: 3px;
             background-color: $tertiary_color;
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                width: 70px;
+                height: 5px;
+            }
         }
     }
     &_container--flex {
@@ -67,6 +99,9 @@
         box-shadow: $box_shadow lighten($color_shadow, $amount: 85);
         margin: 10px 20px;
         padding: 0 0 0 15px;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            margin: 20px 60px;
+        }
         &-box {
             display: flex;
             flex-direction: row;
@@ -78,6 +113,9 @@
             padding-top: 10px;
             font-family: $main_font;
             @include ellipse;
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                font-size: 1.6rem;
+            }
         }
         &_infos {
             width: 80%;
@@ -85,22 +123,32 @@
         }
         &_description {
             margin: 0;
-            padding: 6px 0;
+            padding: 6px 0 10px 0;
             font-family: $main_font;
             font-size: .9rem;
             @include ellipse;
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                font-size: 1.5rem;
+                padding: 12px 0 20px 0;
+            }
         }
         &_price {
             position: relative;
             font-size: .9rem;
             font-weight: bolder;
             width: 20%;
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                font-size: 1.4rem;
+            }
         }
         &_style {
             position: absolute;
             top: 38%;
             right: 25px;
-            // display: inline-block;
+            display: inline-block;
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                top: 30%;
+            }
         }
         &_select {
             display: flex;
@@ -111,7 +159,6 @@
             background-color: $tertiary_color;
             border-radius: 0 15px 15px 0;
             transition: all 1s;
-            animation: movePrice 2s ease-in-out forwards;
         }
         &-icon {
             opacity: 0;
@@ -120,7 +167,6 @@
             border-radius: 50%;
             padding: 3px;
             color: $tertiary_color;
-            // animation: checkIcon 2s ease-in-out forwards; 
         }
         @include animCheck;
     }

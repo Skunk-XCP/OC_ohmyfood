@@ -6,6 +6,9 @@
     padding: 10px 0 10px 70px;
     background-color: $location_bgc;
     margin-top: 3px;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding: 15px 0 15px 90px;
+    }
 }
 
 .location {
@@ -13,10 +16,16 @@
         font-size: 1.1rem;
         border: none;
         background-color: $location_bgc;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            font-size: 1.8rem;
+        }
     }
     &_form--icon {
         font-size: .9rem;
         margin: 0 10px;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -27,15 +36,23 @@
     padding-bottom: 70px;
     text-align: center;
     &_title {
-        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 30px;
         padding: 30px 30px 0 30px;
-        @extend %flex_center;
         font-family: $main_font;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            font-size: 3rem;
+        }
     }
     &_subtitle {
-        @extend %flex_center;
-        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 30px;
         padding-bottom: 20px;
+        font-size: 1.1rem;
         font-family: $main_font;
     }
     &_btn {
@@ -54,6 +71,9 @@
 .title_test {
     margin: 0 0 30px 20px;
     font-family: $main_font;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        font-size: 3rem;
+    }
 }
 
 .step {
@@ -125,7 +145,7 @@
         font-family: $main_font;
         color: black;
     }
-    @include hearts(30px, 20px)
+    @include hearts(30px, 20px, 20px)
 }
 
 .card > a {

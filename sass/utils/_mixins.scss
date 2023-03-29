@@ -21,12 +21,18 @@
     left: -5%;
 }
 
-@mixin hearts ($pos_x, $pos_y) {
+@mixin hearts ($pos_x, $pos_y, $fsize) {
     &_icon {
         position: absolute;
-        font-size: 20px;
+        font-size: $fsize;
         right: $pos_x;
         bottom: $pos_y;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            right: 80px;
+            bottom: 30px;
+            font-size: 40px;
+            // A REVOIR
+        }
         &--empty {
             position: relative;
             cursor: pointer;
@@ -54,7 +60,7 @@
 }
 
 @mixin animCheck {
-    &:active &-box {
+    &:active &_card {
         width: 60%;
         transition: all 1s;
     }
