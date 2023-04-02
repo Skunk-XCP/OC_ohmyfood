@@ -1,52 +1,76 @@
-.infos_footer {
-    background-color: #353333;
-    color: white;
-    padding: 15px 0 25px 20px;
+.footer {
+  background-color: #353333;
+  color: white;
+  padding-bottom: 5%;
+
+  @media screen and (min-width: 992px) {
+    padding: 3% 0 1% 4%;
+  }
+
+  &__logo {
+    height: 1rem;
+    padding: 5% 0 3% 6%;
+
     @media screen and (min-width: 768px) and (max-width: 991px) {
-        padding: 30px 0 30px 40px;
+      height: 1.3rem;
     }
-    &_logo {
-        height: .9rem;
-        padding-bottom: 15px;
-        @media screen and (min-width: 768px) and (max-width: 991px) {
-            height: 1.8rem;
-            padding-bottom: 30px;
-        }
+
+    @media screen and (min-width: 992px) {
+      height: 1.3rem;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 1%;
     }
-    &_mention {
-        &--line {
-            display: flex;
-            align-items: center;
-            padding-bottom: 5px;
-            font-family: $main_font;
-        }
-        &--icon1 {
-            font-size: .7rem;
-            margin-right: 12px;
-            @media screen and (min-width: 768px) and (max-width: 991px) {
-                font-size: 1.5rem;
-                margin-right: 24px;
-            }
-        }
-        &--icon2 {
-            font-size: .6rem;
-            margin-right: 10px;
-            @media screen and (min-width: 768px) and (max-width: 991px) {
-                font-size: 1.2rem;
-                margin-right: 21px;
-            }
-        }
-        &--text {
-            font-size: .9rem;
-            color: white;
-            margin: 0;
-            @media screen and (min-width: 768px) and (max-width: 991px) {
-                font-size: 1.6rem;
-            }
-        }
+  }
+
+  &__mention {
+    &-line {
+      display: flex;
+      align-items: center;
+      padding-bottom: 5px;
+      font-family: $main_font;
+      padding: 0 0 1% 6%;
+
+      @media screen and (min-width: 992px) {
+        width: 15%;
+        margin: 1% auto;
+        padding: 0 0 0 6%;
+      }
     }
+
+    &-icon1 {
+      font-size: .7rem;
+      margin-right: 12px;
+
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        font-size: 1.1rem;
+        margin-right: 30px;
+      }
+    }
+
+    &-icon2 {
+      font-size: .6rem;
+      margin-right: 10px;
+
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        font-size: 1.2rem;
+        margin-right: 21px;
+      }
+    }
+
+    &-text {
+      font-size: .9rem;
+      color: white;
+      margin: 0;
+
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        font-size: 1.3rem;
+      }
+    }
+  }
 }
 
-.infos_footer_mention--line > a {
-    text-decoration: none;
+.footer__mention-line > a {
+  text-decoration: none;
 }
+
