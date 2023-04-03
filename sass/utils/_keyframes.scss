@@ -49,3 +49,35 @@
         opacity: 1;
     }
 }
+
+@keyframes loader-grow {
+    to{
+      transform: scale(1.2);
+      background-color: $secondary_color;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotate{
+    to{
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes home {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
