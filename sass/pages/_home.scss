@@ -42,8 +42,6 @@
     }
 }
 
-// LOCALISATION --------------------------------
-
 .location {
   display: flex;
   justify-content: center;
@@ -73,15 +71,9 @@
       font-size: .9rem;
       margin: 0 .6em;
 
-      @media screen and (min-width: 768px) and (max-width: 991px) {
-        // font-size: 1.6rem;
-      }
     }
   }
 }
-
-
-// EXPLORATION --------------------------------
 
 .top-content{
     background-color: $bg_color;
@@ -108,10 +100,6 @@
         padding-bottom: 1.2em;
         font-size: 1.1rem;
         font-family: $main_font;
-
-        @media screen and (min-width: 768px) and (max-width: 991px) {
-            // font-size: 1.8rem;
-        }
 
         @media screen and (min-width:992px) {
             font-size: 1rem;
@@ -207,8 +195,6 @@
     }
   }
 }
-
-// RESTAURANTS --------------------------------
 
 .restaurants {
   background-color: $bg_color;

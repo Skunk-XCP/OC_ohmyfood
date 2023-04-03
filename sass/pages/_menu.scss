@@ -4,15 +4,8 @@
   top: 20px;
 }
 
-// BLOC MENU---------------------------------------------
 .menu {
-  background-color: #f2f2f2;
-  margin-bottom: 5em;
-
-  @media screen and (min-width:992px) {
-    margin-bottom: 5em;
-  }
-
+  
   &__image {
     height: 12rem;
     object-fit: cover;
@@ -30,11 +23,13 @@
   &__bloc {
     position: relative;
     margin-top: -30px;
-    background-color: #fff;
+    background-color: #f2f2f2;
     border-radius: 35px 35px 0 0;
+    padding-bottom: 5em;
 
     @media screen and (min-width:992px) {
       height: 40rem;
+      padding-bottom: 6em;
     }
   }
 
