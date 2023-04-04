@@ -7,8 +7,14 @@
     border-radius: 30px;
     background: linear-gradient(to bottom right, $primary_color, $secondary_color);
     box-shadow: $box_shadow lighten($color_shadow, $amount: 50);
-    &:hover {
+    &:active {
         background: linear-gradient(to right bottom, lighten($primary_color, $amount:5), lighten($secondary_color, $amount:5));
         box-shadow: 6px 6px 10px darken($color_shadow, $amount:10);
+    }
+    @media screen and (min-width: 992px) {
+        &:hover {
+            background: linear-gradient(to right bottom, lighten($primary_color, $amount:5), lighten($secondary_color, $amount:5));
+            box-shadow: 6px 6px 10px darken($color_shadow, $amount:10);
+        }
     }
 }

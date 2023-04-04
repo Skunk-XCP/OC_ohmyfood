@@ -3,43 +3,48 @@
   animation: home 1s ease-in-out 3s forwards;
 }
 
-.loader{
-  position:absolute;
+.loader {
+  position: absolute;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   left: 0;
   top: 0;
   animation: loader 1s ease-in-out 3s forwards;
+
   &--icone {
-      font-size: 4em;
-      margin-bottom: 50px;
-      color: $tertiary_color;
-      animation: rotate 2000ms infinite;
-    }
+    font-size: 4em;
+    margin-bottom: 50px;
+    color: $tertiary_color;
+    animation: rotate 2000ms infinite;
+  }
+
   &--ellipses {
-      display: flex;
-      width: 100px;
-      justify-content: space-between;
-    }
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+  }
+
   &--ellipses span {
-      background-color: $primary_color;
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      opacity: 0;
-      animation: loader-grow 2000ms infinite alternate;
-    }
+    background-color: $primary_color;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: loader-grow 2000ms infinite alternate;
+  }
+
   &--ellipses span:nth-child(2) {
-      animation-delay: 400ms;
-    }
+    animation-delay: 400ms;
+  }
+
   &--ellipses span:nth-child(3) {
-      animation-delay: 800ms;
-    }
+    animation-delay: 800ms;
+  }
 }
 
 .location {
@@ -57,10 +62,6 @@
     border: none;
     background-color: $location_bgc;
 
-    @media screen and (min-width: 768px) and (max-width: 991px) {
-      // font-size: 1.8rem;
-    }
-
     @media screen and (min-width: 992px) {
       font-size: 1rem;
     }
@@ -75,39 +76,42 @@
   }
 }
 
-.top-content{
-    background-color: $bg_color;
-    padding-bottom: 5em;
+.top-content {
+  background-color: $bg_color;
+  padding-bottom: 5em;
+  text-align: center;
+
+  &__title {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    &__title {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        width: 70%;
-        margin: 0 auto;
-        padding: 1.8em 1.8em 0 1.8em;
-        font-family: $main_font;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1.8em 1.8em 0 1.8em;
+    font-family: $main_font;
 
-        @media screen and (min-width:992px) {
-            font-size: 1.8rem;
-        }
+    @media screen and (min-width:992px) {
+      font-size: 1.8rem;
     }
-    &__subtitle {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 1.8em;
-        padding-bottom: 1.2em;
-        font-size: 1.1rem;
-        font-family: $main_font;
+  }
 
-        @media screen and (min-width:992px) {
-            font-size: 1rem;
-        }
+  &__subtitle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1.8em;
+    padding-bottom: 1.2em;
+    font-size: 1.1rem;
+    font-family: $main_font;
+
+    @media screen and (min-width:992px) {
+      font-size: 1rem;
     }
-    &__btn {
-        @include main_btn($secondary_color, $primary_color, .9em, 1.5em);
-    }
+  }
+
+  &__btn {
+    @include main_btn($secondary_color, $primary_color, .9em, 1.5em);
+  }
 }
 
 .operations {
@@ -186,11 +190,21 @@
       }
     }
 
-    &:hover {
+    &:active {
       background-color: lighten($primary_color, $amount: 35);
 
       .operations__step-icon {
         color: $primary_color;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      &:hover {
+        background-color: lighten($primary_color, $amount: 35);
+
+        .operations__step-icon {
+          color: $primary_color;
+        }
       }
     }
   }
@@ -234,7 +248,7 @@
     background-color: #fff;
     position: relative;
     @include hearts(7%, 80%, 1.5em);
-    
+
     @media screen and (min-width: 992px) {
       width: 45%;
       margin-bottom: 5%;
@@ -295,5 +309,3 @@
     }
   }
 }
-
-

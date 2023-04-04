@@ -297,9 +297,15 @@ header {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 3px 3px 10px gray;
 }
-.top-content__btn:hover {
+.top-content__btn:active {
   background: linear-gradient(to right bottom, #ff93e1, #a16be0);
   box-shadow: 6px 6px 10px black;
+}
+@media screen and (min-width: 992px) {
+  .top-content__btn:hover {
+    background: linear-gradient(to right bottom, #ff93e1, #a16be0);
+    box-shadow: 6px 6px 10px black;
+  }
 }
 
 .operations {
@@ -378,11 +384,19 @@ header {
 .operations__step-number-text {
   margin: 0;
 }
-.operations__step:hover {
+.operations__step:active {
   background-color: #f2eafb;
 }
-.operations__step:hover .operations__step-icon {
+.operations__step:active .operations__step-icon {
   color: #9356DC;
+}
+@media screen and (min-width: 992px) {
+  .operations__step:hover {
+    background-color: #f2eafb;
+  }
+  .operations__step:hover .operations__step-icon {
+    color: #9356DC;
+  }
 }
 
 .restaurants {
@@ -752,9 +766,15 @@ header {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 3px 3px 10px gray;
 }
-.menu__btn--order:hover {
+.menu__btn--order:active {
   background: linear-gradient(to right bottom, #ff93e1, #a16be0);
   box-shadow: 6px 6px 10px black;
+}
+@media screen and (min-width: 992px) {
+  .menu__btn--order:hover {
+    background: linear-gradient(to right bottom, #ff93e1, #a16be0);
+    box-shadow: 6px 6px 10px black;
+  }
 }
 @media screen and (min-width: 992px) {
   .menu__btn--order {
