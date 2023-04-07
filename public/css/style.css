@@ -95,7 +95,7 @@ header {
   display: flex;
   position: relative;
   justify-content: center;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
 }
 
 .logo_omf {
@@ -295,16 +295,16 @@ header {
   color: white;
   border-radius: 30px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  box-shadow: 3px 3px 10px gray;
+  box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.3);
 }
 .top-content__btn:active {
   background: linear-gradient(to right bottom, #ff93e1, #a16be0);
-  box-shadow: 6px 6px 10px black;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
 }
 @media screen and (min-width: 992px) {
   .top-content__btn:hover {
     background: linear-gradient(to right bottom, #ff93e1, #a16be0);
-    box-shadow: 6px 6px 10px black;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -342,7 +342,7 @@ header {
   padding: 0.6em 0;
   font-family: "Roboto";
   background-color: whitesmoke;
-  box-shadow: 3px 3px 10px #cccccc;
+  box-shadow: 3px 3px 10px rgba(204, 204, 204, 0.3);
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .operations__step {
@@ -437,7 +437,7 @@ header {
   margin-bottom: 1.2em;
   background-color: #fff;
   position: relative;
-  box-shadow: 3px 3px 10px #d9d9d9;
+  box-shadow: 3px 3px 10px rgba(217, 217, 217, 0.3);
 }
 .restaurants__card--icon {
   position: absolute;
@@ -644,7 +644,7 @@ header {
   font-family: "Roboto";
   border-radius: 15px;
   background-color: #fff;
-  box-shadow: 3px 3px 10px #d9d9d9;
+  box-shadow: 3px 3px 10px rgba(217, 217, 217, 0.3);
   margin: 0.6em 1.2em;
   opacity: 0;
   animation: apparition 2s ease-in-out forwards;
@@ -764,16 +764,16 @@ header {
   color: white;
   border-radius: 30px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  box-shadow: 3px 3px 10px gray;
+  box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.3);
 }
 .menu__btn--order:active {
   background: linear-gradient(to right bottom, #ff93e1, #a16be0);
-  box-shadow: 6px 6px 10px black;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
 }
 @media screen and (min-width: 992px) {
   .menu__btn--order:hover {
     background: linear-gradient(to right bottom, #ff93e1, #a16be0);
-    box-shadow: 6px 6px 10px black;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
   }
 }
 @media screen and (min-width: 992px) {
