@@ -126,6 +126,7 @@
 
   &__card__infos {
     width: 80%;
+    @include ellipse;
   }
 
   &__card__title {

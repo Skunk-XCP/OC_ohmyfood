@@ -704,6 +704,9 @@ header {
 }
 .menu__card__infos {
   width: 80%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__card__title {
   margin: 0;
