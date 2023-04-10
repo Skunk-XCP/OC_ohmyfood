@@ -142,6 +142,7 @@ header {
   padding-bottom: 5px;
   font-family: "Roboto";
   padding: 0 0 1% 6%;
+  margin: 0;
 }
 @media screen and (min-width: 992px) {
   .footer__mention-line {
@@ -149,6 +150,12 @@ header {
     margin: 1% auto;
     padding: 0 0 0 6%;
   }
+}
+.footer__mention__mention > ul, .footer__mention li {
+  list-style: none;
+}
+.footer__mention__mention > ul, .footer__mention li > a {
+  text-decoration: none;
 }
 .footer__mention-icon1 {
   font-size: 0.7rem;
@@ -181,17 +188,13 @@ header {
   }
 }
 
-.footer__mention-line > a {
-  text-decoration: none;
-}
-
 .home {
   opacity: 0;
   animation: home 1s ease-in-out 3s forwards;
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   display: flex;
@@ -344,6 +347,24 @@ header {
   background-color: whitesmoke;
   box-shadow: 3px 3px 10px rgba(204, 204, 204, 0.3);
 }
+.operations__step::before {
+  content: attr(data-number);
+  border: 1px solid;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  padding: 0.2em;
+  color: white;
+  background-color: #9356DC;
+  font-size: 1em;
+}
+.operations__step__step > ul, .operations__step li {
+  list-style: none;
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .operations__step {
     width: 80%;
@@ -357,7 +378,6 @@ header {
 }
 .operations__step-icon {
   color: grey;
-  padding-left: 2em;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .operations__step-icon {
@@ -366,23 +386,12 @@ header {
 }
 .operations__step-title {
   padding-left: 1.2em;
+  font-weight: bolder;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .operations__step-title {
     font-size: 1.5rem;
   }
-}
-.operations__step-number {
-  border: 1px solid;
-  border-radius: 25px;
-  padding: 0.3em 0.6em;
-  color: white;
-  background-color: #9356DC;
-  position: absolute;
-  transform: translateX(-50%);
-}
-.operations__step-number-text {
-  margin: 0;
 }
 .operations__step:active {
   background-color: #f2eafb;
@@ -546,6 +555,7 @@ header {
   background-color: #f2f2f2;
   border-radius: 35px 35px 0 0;
   padding-bottom: 5em;
+  margin-bottom: -30px;
 }
 @media screen and (min-width: 992px) {
   .menu__bloc {

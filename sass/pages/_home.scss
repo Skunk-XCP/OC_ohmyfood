@@ -4,7 +4,7 @@
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   display: flex;
@@ -149,6 +149,24 @@
     font-family: $main_font;
     background-color: lighten(#f2f2f2, $amount: 1);
     box-shadow: $box_shadow lighten($color_shadow, $amount: 80);
+    &::before {
+      content: attr(data-number);
+      border: 1px solid;
+      border-radius: 50%;
+      width: 1.5em;
+      height: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(-50%);
+      padding: .2em;
+      color: white;
+      background-color: #9356DC;
+      font-size: 1em;
+    }
+    &__step > ul, li {
+      list-style: none;
+    }
 
     @media screen and (min-width: 768px) and (max-width: 991px) {
       width: 80%;
@@ -161,7 +179,6 @@
 
     &-icon {
       color: grey;
-      padding-left: 2em;
 
       @media screen and (min-width: 768px) and (max-width: 991px) {
         font-size: 1.5rem;
@@ -170,23 +187,10 @@
 
     &-title {
       padding-left: 1.2em;
+      font-weight: bolder;
 
       @media screen and (min-width: 768px) and (max-width: 991px) {
         font-size: 1.5rem;
-      }
-    }
-
-    &-number {
-      border: 1px solid;
-      border-radius: 25px;
-      padding: .3em .6em;
-      color: white;
-      background-color: #9356DC;
-      position: absolute;
-      transform: translateX(-50%);
-
-      &-text {
-        margin: 0;
       }
     }
 
