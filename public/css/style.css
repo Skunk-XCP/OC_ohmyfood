@@ -722,30 +722,51 @@ header {
   margin: 0;
   padding: 0.6em 0 0 0.9em;
   font-family: "Roboto";
+  font-size: 0.9em;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+  .menu__card__title {
+    font-size: 1em;
+  }
 }
 .menu__card__description {
   margin: 0;
   padding: 0.3em 0 0.6em 0.9em;
   font-family: "Roboto";
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
+@media screen and (min-width: 992px) {
+  .menu__card__description {
+    font-size: 0.9em;
+  }
+}
 .menu__card__price {
   position: relative;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: bolder;
   width: 20%;
 }
+@media screen and (min-width: 992px) {
+  .menu__card__price {
+    font-size: 0.9em;
+  }
+}
 .menu__card__price-text {
   position: absolute;
-  top: 38%;
-  right: 1.6em;
+  top: 35%;
+  right: 1em;
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .menu__card__price-text {
+    top: 32%;
+  }
 }
 .menu__card__select {
   display: flex;
